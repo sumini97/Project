@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Post</title>
+</head>
+<body>
+<dl>
+    <dd th:text="${post.title}"></dd>
+    <dd th:text="${post.body}"></dd><br>
+
+    <a th:href="@{/test/Update/{id}(id=${post.id})}">
+        <td>수정</td>
+        <br>
+    </a>
+
+    <a th:href="@{/test/delete/{id}(id=${post.id})}">
+        <td>삭제</td>
+        <br>
+    </a>
+</dl>
+</body>
+</html>
