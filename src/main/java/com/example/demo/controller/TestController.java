@@ -71,5 +71,5 @@ public class TestController {
     postMapper.updateData(title,body,postId);
     return "redirect:/test/first/{postId}";
   }
-
+///////////
 }
