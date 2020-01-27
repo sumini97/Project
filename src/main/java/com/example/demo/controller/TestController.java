@@ -66,10 +66,12 @@ public class TestController {
     return "Update";
   }
 
-  @PostMapping("/updated/{postId}")
-  public String Updated(@PathVariable("title") String title, @PathVariable("body") String body,@PathVariable("postId") int postId){
+  @PostMapping(value = "/Update")
+  public String Updated(Model model, @PathVariable("title") String title, @PathVariable("body") String body,@PathVariable("postId") int postId){
     postMapper.updateData(title,body,postId);
     return "redirect:/test/first/{postId}";
   }
-///////////
+
+
+
 }
